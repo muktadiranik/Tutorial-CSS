@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightblue;
+}
+
+.header {
+  background-color: aquamarine;
+  padding: 10px;
+  display: flex;
+  float: left;
+  justify-content: center;
+}
+
+.nav {
+  background-color: cadetblue;
+  display: flex;
+  float: left;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav > a {
+  padding: 5px;
+  margin: 5px;
+  text-decoration: none;
+  background-color: hotpink;
+  text-align: center;
+}
+
+.body {
+  background-color: chocolate;
+  padding: 10px;
+  display: block;
+  float: left;
+}
+
+.aside {
+  background-color: teal;
+  padding: 10px;
+  display: flex;
+  float: left;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.footer {
+  background-color: cornflowerblue;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  float: left;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    background-color: skyblue;
+  }
+
+  .nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /*  */
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+  /*  */
+
+  .nav {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  body {
+    background-color: blue;
+  }
+
+  .col-sm-1 {
+    width: 8.33%;
+  }
+  .col-sm-2 {
+    width: 16.66%;
+  }
+  .col-sm-3 {
+    width: 25%;
+  }
+  .col-sm-4 {
+    width: 33.33%;
+  }
+  .col-sm-5 {
+    width: 41.66%;
+  }
+  .col-sm-6 {
+    width: 50%;
+  }
+  .col-sm-7 {
+    width: 58.33%;
+  }
+  .col-sm-8 {
+    width: 66.66%;
+  }
+  .col-sm-9 {
+    width: 75%;
+  }
+  .col-sm-10 {
+    width: 83.33%;
+  }
+  .col-sm-11 {
+    width: 91.66%;
+  }
+  .col-sm-12 {
+    width: 100%;
+  }
+
+  .nav {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: green;
+  }
+
+  .nav {
+    flex-direction: column;
+  }
+
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: red;
+  }
+}
